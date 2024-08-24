@@ -105,7 +105,3 @@ url = "https://github.com/strato-emu/strato"
 [[params.socialIcons]]
 name = "discord"
 url = "https://discord.gg/YhpdhVBmXX"
-
-[[params.socialIcons]]
-name = "Rss"
-url = "index.xml"
