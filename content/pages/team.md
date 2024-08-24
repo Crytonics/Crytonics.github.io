@@ -5,10 +5,12 @@ author = "Strato Team"
 +++
 
 <style>
+    .wrapper {
+        max-width: calc(1000px - (30px * 2));
+    }
     .team-container {
         display: flex;
         flex-direction: row;
-
         flex-wrap: wrap;
         justify-content: left;
     }
@@ -21,7 +23,7 @@ author = "Strato Team"
         border-radius: 10px;
         background: linear-gradient(to bottom, #27272a 50%, #18181b 50%);
         width: 250px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         margin-right: 20px;
     }
 
@@ -54,11 +56,11 @@ author = "Strato Team"
 
 
 <div style="text-align: center; color: #3b82f6">
-    The Strato Team was composed of passionate individuals from all around the world 🌐
+    The Strato Team is composed of passionate individuals from all around the world 🌐
 </div>
 
 
-# App Developers
+<h3>App Developers</h3>
 <!-- This is first row -->
 <div class="team-container" style="padding-top: 10px;">
     <div class="team-member">
@@ -74,7 +76,7 @@ author = "Strato Team"
     </div>
 </div>
 
-### Web/Bot Developers
+<h3 style="margin-top: 0px;">Web/Bot Developerss</h3>
 <!-- This is first row -->
 <div class="team-container" style="padding-top: 10px;">
     <div class="team-member">
@@ -90,7 +92,7 @@ author = "Strato Team"
     </div>
 </div>
 
-### Senior Community Managers
+<h3 style="margin-top: 0px;">Senior Community Managers</h3>
 <!-- This is first row -->
 <div class="team-container" style="padding-top: 10px;">
     <div class="team-member">
@@ -106,7 +108,7 @@ author = "Strato Team"
     </div>
 </div>
 
-### Community Managers
+<h3 style="margin-top: 0px;">Community Managers</h3>
 <!-- This is first row -->
 <div class="team-container" style="padding-top: 10px;">
     <div class="team-member">
@@ -131,10 +133,6 @@ author = "Strato Team"
             </a>
         </div>
     </div>
-</div>
-
-<!-- This is second row -->
-<div class="team-container">
     <div class="team-member">
         <img alt="Swizzlefowl" src="https://avatars.githubusercontent.com/u/81425424?v=4">
         <div>
@@ -157,10 +155,6 @@ author = "Strato Team"
             </a>
         </div>
     </div>
-</div>
-
-<!-- This is third row -->
-<div class="team-container">
     <div class="team-member">
         <img alt="Swizzlefowl" src="https://avatars.githubusercontent.com/u/15641825">
         <div>
@@ -183,10 +177,6 @@ author = "Strato Team"
             </a>
         </div>
     </div>
-</div>
-
-<!-- This is fourth row -->
-<div class="team-container">
     <div class="team-member">
         <img alt="Swizzlefowl" src="https://avatars.githubusercontent.com/u/116469495?v=4">
         <div>
@@ -200,7 +190,7 @@ author = "Strato Team"
     </div>
 </div>
 
-### Junior Community Managers
+<h3 style="margin-top: 0px;">Junior Community Managers</h3>
 <!-- This is first row -->
 <div class="team-container" style="padding-top: 10px;">
     <div class="team-member">
@@ -225,10 +215,6 @@ author = "Strato Team"
             </a>
         </div>
     </div>
-</div>
-
-<!-- This is second row -->
-<div class="team-container">
     <div class="team-member">
         <img alt="Swizzlefowl" src="https://avatars.githubusercontent.com/u/39139570">
         <div>
@@ -251,10 +237,6 @@ author = "Strato Team"
             </a>
         </div>
     </div>
-</div>
-
-<!-- This is third row -->
-<div class="team-container">
     <div class="team-member">
         <img alt="Swizzlefowl" src="https://avatars.githubusercontent.com/u/73367365?v=4">
         <div>
@@ -277,10 +259,6 @@ author = "Strato Team"
             </a>
         </div>
     </div>
-</div>
-
-<!-- This is fourth row -->
-<div class="team-container">
     <div class="team-member">
         <img alt="Swizzlefowl" src="https://avatars.githubusercontent.com/u/126016578?v=4">
         <div>
