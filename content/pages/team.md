@@ -4,72 +4,9 @@ description = "About Strato - Nintendo Switch™ Emulator"
 author = "Strato Team"
 +++
 
-<style>
-    .wrapper {
-        max-width: calc(1000px - (30px * 2));
-    }
-    .team-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: left;
-    }
-
-    .team-member {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        border-radius: 10px;
-        background: linear-gradient(to bottom, #27272a 50%, #18181b 50%);
-        width: 250px;
-        margin-bottom: 20px;
-        margin-right: 20px;
-        transition: transform 0.1s ease-in-out;
-    }
-
-    .team-member:hover {
-        transform: scale(1.10);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.1s ease-in-out;
-    }
-
-    .team-member img {
-        border-radius: 50%;
-        width: 80px;
-        height: 80px;
-        margin: 0 0;
-    }
-
-    .team-member h1 {
-        margin: 0 10px;
-    }
-
-    .team-member a {
-        padding-left: 10px;
-    }
-
-    .github-icon:hover {
-        fill: #f65263;
-        stroke: #f65263;
-    }
-
-    @media (max-width: 600px) {
-        .team-container {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .team-member {
-            width: 95%;
-        }
-    }
-</style>
-
-
 <div style="text-align: center; color: #3b82f6">
     The Strato Team is composed of passionate individuals from all around the world 🌐
 </div>
-
 
 <h3>App Developers</h3>
 <!-- This is first row -->
