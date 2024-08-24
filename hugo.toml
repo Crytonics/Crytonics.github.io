@@ -52,6 +52,11 @@ pageRef = "about"
 name = 'About'
 url = '/about/'
 weight = 30
+[[menu.main]]
+pageRef = "team"
+name = 'Team'
+url = '/team/'
+weight = 40
 
 [params]
 sitename = "Strato - Nintendo Switch™ Emulator"
