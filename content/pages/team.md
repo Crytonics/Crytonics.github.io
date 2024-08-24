@@ -47,7 +47,7 @@ author = "Strato Team"
         }
 
         .team-member {
-            width: 90%;
+            width: 95%;
         }
     }
 </style>
