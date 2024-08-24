@@ -18,13 +18,19 @@ author = "Strato Team"
     .team-member {
         display: flex;
         align-items: center;
-        border: 1px solid #fff;
         padding: 10px;
         border-radius: 10px;
         background: linear-gradient(to bottom, #27272a 50%, #18181b 50%);
         width: 250px;
         margin-bottom: 20px;
         margin-right: 20px;
+        transition: transform 0.1s ease-in-out;
+    }
+
+    .team-member:hover {
+        transform: scale(1.10);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.1s ease-in-out;
     }
 
     .team-member img {
