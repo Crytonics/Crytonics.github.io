@@ -8,27 +8,27 @@ Latest data on the emulator's compatibility. Click to see the list of games that
 
 <div class="rectangle" id="rectangle-playable">
     <h3 id="playable-block-title">Playable</h3>
-    <h3 class="percentage" id="playable-percentage">(0%)</h3>
+    <h3 class="percentage" id="playable-percentage"></h3>
     <progress class="progress" id="progress-playable" value="0" max="100" style="--progress-value-color: #18e022;"></progress>
 </div>
 <div class="rectangle" id="rectangle-ingame">
     <h3 id="ingame-block-title">Ingame</h3>
-    <h3 class="percentage" id="ingame-percentage">(0%)</h3>
+    <h3 class="percentage" id="ingame-percentage"></h3>
     <progress class="progress" id="progress-ingame" value="0" max="100" style="--progress-value-color: #58a32f;"></progress>
 </div>
 <div class="rectangle" id="rectangle-menus">
     <h3 id="menus-block-title">Menus</h3>
-    <h3 class="percentage" id="menus-percentage">(0%)</h3>
+    <h3 class="percentage" id="menus-percentage"></h3>
     <progress class="progress" id="progress-menus" value="0" max="100" style="--progress-value-color: #bfb302;"></progress>
 </div>
 <div class="rectangle" id="rectangle-boots">
     <h3 id="boots-block-title">Boots</h3>
-    <h3 class="percentage" id="boots-percentage">(0%)</h3>
+    <h3 class="percentage" id="boots-percentage"></h3>
     <progress class="progress" id="progress-boots" value="0" max="100" style="--progress-value-color: #e08a1e;"></progress>
 </div>
 <div class="rectangle" id="rectangle-nothing">
     <h3 id="nothing-block-title">Nothing</h3>
-    <h3 class="percentage" id="nothing-percentage">(0%)</h3>
+    <h3 class="percentage" id="nothing-percentage"></h3>
     <progress class="progress" id="progress-nothing" value="0" max="100" style="--progress-value-color: #fc0307;"></progress>
 </div>
 
