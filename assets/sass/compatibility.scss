@@ -73,7 +73,7 @@
 
 @mixin dark-mode {
     .rectangle {
-        background: linear-gradient(rgb(39, 39, 42) 50%, rgb(24, 24, 27) 50%);
+        background: linear-gradient(rgb(55, 55, 58) 0%, rgb(24, 24, 27) 50%);
     }
 
     .rectangle h3 {
@@ -93,7 +93,7 @@
 
 @mixin light-mode {
     .rectangle {
-        background: linear-gradient(to bottom, #e7e5e4 50%, #d6d3d1 50%);
+        background: linear-gradient(to bottom, #e7e5e4 0%, #686766 100%);
     }
 
     .rectangle h3 {
