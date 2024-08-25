@@ -87,9 +87,6 @@
 }
 
 @mixin light-mode {
-    .wrapper {
-        max-width: calc(1000px - (30px * 2));
-    }
     .team-container {
         display: flex;
         flex-direction: row;
