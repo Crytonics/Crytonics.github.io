@@ -1,0 +1,11 @@
+{{ if hugo.IsProduction }}
+{{ $theme_script := resources.Get "js/theme.js" | minify | fingerprint }}
+<script src="{{ $theme_script.RelPermalink }}" integrity="{{ $theme_script.Data.Integrity }}"></script>
+{{ $background_script := resources.Get "js/background.js" }}
+<script src="{{ $background_script.RelPermalink }}"></script>
+{{ else }}
+{{ $theme_script := resources.Get "js/theme.js" }}
+<script src="{{ $theme_script.RelPermalink }}"></script>
+{{ $background_script := resources.Get "js/background.js" }}
+<script src="{{ $background_script.RelPermalink }}"></script>
+{{ end}}

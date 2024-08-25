@@ -1,0 +1,30 @@
+.container {
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+    bottom: 0;
+}
+
+.bubbles {
+    position: absolute;
+    display: flex;
+    z-index: -1;
+}
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #c26e1a;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #c26e1a44, 0 0 50px #c26e1a, 0 0 100px #c26e1a;
+    animation: animate 100s linear infinite;
+    animation-duration: calc(200s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background: #f11b5d;
+    box-shadow: 0 0 0 10px #f11b5d44, 0 0 50px #f11b5d, 0 0 100px #f11b5d;
+
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+    <div class="container">
+        <div class="bubbles">
+            <!-- Spans will be dynamically added here -->
+        </div>
+    </div>
+
+    {{- partial "head.html" . -}}
+    <body data-theme = "{{ .Site.Params.defaultColor }}" class="notransition">
+        {{- partial "scriptsBodyStart.html" . -}}
+        {{- partial "header.html" . -}}
+        {{- block "main" . }}{{- end }}
+        {{- partial "footer.html" . -}}
+        {{- partial "scriptsBodyEnd.html" . -}}
+    </body>
+</html>

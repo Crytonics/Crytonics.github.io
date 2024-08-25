@@ -14,6 +14,11 @@
 {{- partial "head.html" . -}}
 
 <body data-theme="{{ $defaultColor }}" class="notransition">
+    <div class="container">
+        <div class="bubbles">
+            <!-- Spans will be dynamically added here -->
+        </div>
+    </div>
     {{- partial "scriptsBodyStart.html" . -}}
     {{- partial "header.html" . -}}
     <div class="wrapper">
