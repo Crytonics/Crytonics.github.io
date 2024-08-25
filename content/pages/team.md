@@ -230,3 +230,9 @@ author = "Strato Team"
         </div>
     </div>
 </div>
+
+<style>
+    .wrapper {
+        max-width: calc(1000px - (30px * 2));
+    }
+</style>
