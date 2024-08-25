@@ -58,24 +58,62 @@
     background-image: conic-gradient(from var(--angle), transparent, 90%, #fc0307), conic-gradient(from var(--angle2), transparent, 90%, #fc0307);
 }
 
+@mixin dark-mode {
+    .rectangle {
+        width: 350px; /* Set the width of the rectangle */
+        height: 100px; /* Set the height of the rectangle */
+        background: linear-gradient(rgb(39, 39, 42) 50%, rgb(24, 24, 27) 50%);
+        margin-bottom: 10px; /* Optional: Add some space between the rectangles */
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        border-radius: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-.rectangle {
-    width: 350px; /* Set the width of the rectangle */
-    height: 100px; /* Set the height of the rectangle */
-    background: linear-gradient(rgb(39, 39, 42) 50%, rgb(24, 24, 27) 50%);
-    margin-bottom: 10px; /* Optional: Add some space between the rectangles */
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    border-radius: 50px;
-    margin-left: auto;
-    margin-right: auto;
+    .rectangle h3 {
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+    }
+
+    .rectangle .progress {
+        width: 50%;
+        position: absolute;
+        right: 25px;
+        top: 60px;
+    }
 }
 
-.rectangle h3 {
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+@mixin light-mode {
+    .rectangle {
+        width: 350px; /* Set the width of the rectangle */
+        height: 100px; /* Set the height of the rectangle */
+        background: linear-gradient(to bottom, #e7e5e4 50%, #d6d3d1 50%);
+        margin-bottom: 10px; /* Optional: Add some space between the rectangles */
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        border-radius: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .rectangle h3 {
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Add shadow for text */
+    }
+
+    .rectangle .progress {
+        width: 50%;
+        position: absolute;
+        right: 25px;
+        top: 60px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 1); /* Add shadow for the progress bar */
+    }
 }
 
 .rectangle .percentage {
@@ -84,22 +122,6 @@
     position: absolute;
     left: 240px; /* Corrected to use px */
     top: 10px;
-}
-
-.rectangle .count {
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    color: #20bb60;
-    position: absolute;
-    left: 180px; /* Corrected to use px */
-    top: 10px;
-}
-
-.rectangle .progress {
-    width: 50%;
-    position: absolute;
-    right: 25px;
-    top: 60px;
 }
 
 .rectangle:hover::after, .rectangle:hover::before {
@@ -198,4 +220,12 @@ progress[value]::after {
     } to {
         --progress-value: var(--value);
     }
+}
+
+html.dark {
+    @include dark-mode()
+}
+
+html.light {
+    @include light-mode()
 }
