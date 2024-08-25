@@ -4,14 +4,32 @@ description = "Compatibility Strato - Nintendo Switch™ Emulator"
 author = "Strato Team"
 +++
 
-<div style="text-align: center;">
+Latest data on the emulator's compatibility. Click to see the list of games that are compatible with Strato.
 
-  <img id="badge-playable" src="" alt="Playable">
-  <img id="badge-ingame" src="" alt="Ingame">
-  <img id="badge-menus" src="" alt="Menus">
-  <img id="badge-boots" src="" alt="Boots">
-  <img id="badge-nothing" src="" alt="Nothing">
-
+<div class="rectangle" id="rectangle-playable">
+    <h3 id="playable-block-title">Playable 0000</h3>
+    <h3 class="percentage" id="playable-percentage">(0%)</h3>
+    <progress class="progress" id="progress-playable" value="0" max="100" style="--progress-value-color: #18e022;"></progress>
+</div>
+<div class="rectangle" id="rectangle-ingame">
+    <h3 id="ingame-block-title">Ingame 0000</h3>
+    <h3 class="percentage" id="ingame-percentage">(0%)</h3>
+    <progress class="progress" id="progress-ingame" value="0" max="100" style="--progress-value-color: #58a32f;"></progress>
+</div>
+<div class="rectangle" id="rectangle-menus">
+    <h3 id="menus-block-title">Menus 0000</h3>
+    <h3 class="percentage" id="menus-percentage">(0%)</h3>
+    <progress class="progress" id="progress-menus" value="0" max="100" style="--progress-value-color: #bfb302;"></progress>
+</div>
+<div class="rectangle" id="rectangle-boots">
+    <h3 id="boots-block-title">Boots 0000</h3>
+    <h3 class="percentage" id="boots-percentage">(0%)</h3>
+    <progress class="progress" id="progress-boots" value="0" max="100" style="--progress-value-color: #e08a1e;"></progress>
+</div>
+<div class="rectangle" id="rectangle-nothing">
+    <h3 id="nothing-block-title">Nothing 0000</h3>
+    <h3 class="percentage" id="nothing-percentage">(0%)</h3>
+    <progress class="progress" id="progress-nothing" value="0" max="100" style="--progress-value-color: #fc0307;"></progress>
 </div>
 
 <script>
@@ -20,12 +38,22 @@ author = "Strato Team"
     fetch('https://raw.githubusercontent.com/Crytonics/TestCompactList/main/compat-stats.json') // Updated URL
         .then(response => response.json())
         .then(data => {
-            console.log(data);
-            document.getElementById('badge-playable').src = `https://img.shields.io/badge/Playable-${data['status-playable'].count}_(${data['status-playable'].percentage}%25)-brightgreen`;
-            document.getElementById('badge-ingame').src = `https://img.shields.io/badge/Ingame-${data['status-ingame'].count}_(${data['status-ingame'].percentage}%25)-yellow`;
-            document.getElementById('badge-menus').src = `https://img.shields.io/badge/Menus-${data['status-menus'].count}_(${data['status-menus'].percentage}%25)-orange`;
-            document.getElementById('badge-boots').src = `https://img.shields.io/badge/Boots-${data['status-boots'].count}_(${data['status-boots'].percentage}%25)-red`;
-            document.getElementById('badge-nothing').src = `https://img.shields.io/badge/Nothing-${data['status-nothing'].count}_(${data['status-nothing'].percentage}%25)-blue`;
+            document.getElementById('progress-playable').value = data['status-playable'].percentage;
+            document.getElementById('progress-ingame').value = data['status-ingame'].percentage;
+            document.getElementById('progress-menus').value = data['status-menus'].percentage;
+            document.getElementById('progress-boots').value = data['status-boots'].percentage;
+            document.getElementById('progress-nothing').value = data['status-nothing'].percentage;
+
+            document.getElementById('playable-block-title').innerHTML = "Playable (" + data['status-playable'].count + ")";
+            document.getElementById('playable-percentage').innerHTML = "(" + data['status-playable'].percentage + "%" + ")";
+            document.getElementById('ingame-block-title').innerHTML = "Ingame (" + data['status-ingame'].count + ")";
+            document.getElementById('ingame-percentage').innerHTML = "(" + data['status-ingame'].percentage + "%" + ")";
+            document.getElementById('menus-block-title').innerHTML = "Menus (" + data['status-menus'].count + ")";
+            document.getElementById('menus-percentage').innerHTML = "(" + data['status-menus'].percentage + "%" + ")";
+            document.getElementById('boots-block-title').innerHTML = "Boots (" + data['status-boots'].count + ")";
+            document.getElementById('boots-percentage').innerHTML = "(" + data['status-boots'].percentage + "%" + ")";
+            document.getElementById('nothing-block-title').innerHTML = "Nothing (" + data['status-nothing'].count + ")";
+            document.getElementById('nothing-percentage').innerHTML = "(" + data['status-nothing'].percentage + "%" + ")";
         })
         .catch(error => console.error('Error fetching compatibility stats:', error));
     });
