@@ -76,6 +76,7 @@
     .rectangle h3 {
         margin: 0; /* Remove default margin */
         padding: 0; /* Remove default padding */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Add shadow for text */
     }
 
     .rectangle .progress {
@@ -83,6 +84,7 @@
         position: absolute;
         right: 25px;
         top: 60px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 1); /* Add shadow for the progress bar */
     }
 }
 
