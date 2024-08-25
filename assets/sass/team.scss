@@ -1,3 +1,15 @@
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@property --angle2 {
+    syntax: "<angle>";
+    initial-value: 180deg;
+    inherits: false;
+}
+
 @mixin dark-mode {
     .wrapper {
         max-width: calc(1000px - (30px * 2));
@@ -19,10 +31,28 @@
         margin-bottom: 20px;
         margin-right: 20px;
         transition: transform 0.1s ease-in-out;
+        position: relative;
+    }
+
+    .team-member:hover::after, .team-member:hover::before {
+        content: "";
+        position: absolute;
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        left: -1%;
+        padding: 3px;
+        background-image: conic-gradient(from var(--angle), transparent, 90%, #f11b5d), conic-gradient(from var(--angle2), transparent, 90%, #c26e1a);
+        animation: spin 3s linear infinite;
+    }
+
+    .team-member:hover::before{
+        filter: blur(1.5rem);
+        opacity: 0.5;
     }
 
     .team-member:hover {
-        transform: scale(1.10);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         transition: transform 0.1s ease-in-out;
     }
@@ -80,12 +110,25 @@
         margin-bottom: 20px;
         margin-right: 20px;
         transition: transform 0.1s ease-in-out;
+        position: relative;
     }
 
-    .team-member:hover {
-        transform: scale(1.10);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.1s ease-in-out;
+    .team-member:hover::after, .team-member:hover::before {
+        content: "";
+        position: absolute;
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        left: -1%;
+        padding: 3px;
+        background-image: conic-gradient(from var(--angle), transparent, 90%, #f11b5d), conic-gradient(from var(--angle2), transparent, 90%, #c26e1a);
+        animation: spin 3s linear infinite;
+    }
+
+    .team-member:hover::before{
+        filter: blur(1.5rem);
+        opacity: 0.5;
     }
 
     .team-member img {
@@ -131,4 +174,15 @@ html.dark {
 
 html.light {
     @include light-mode()
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+        --angle2: 180deg;
+    }
+    to {
+        --angle: 360deg;
+        --angle2: 540deg;
+    }
 }
