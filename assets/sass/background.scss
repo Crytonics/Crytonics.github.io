@@ -1,12 +1,12 @@
 .container {
-    position: absolute;
+    position: fixed;
     overflow: hidden;
     z-index: -1;
     bottom: 0;
 }
 
 .bubbles {
-    position: absolute;
+    position: fixed;
     display: flex;
     z-index: -1;
 }
@@ -26,5 +26,4 @@
 .bubbles span:nth-child(even) {
     background: #f11b5d;
     box-shadow: 0 0 0 10px #f11b5d44, 0 0 50px #f11b5d, 0 0 100px #f11b5d;
-
 }
