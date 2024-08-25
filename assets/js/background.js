@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
         container.style.height = document.documentElement.scrollHeight + 'px';
         container.style.width = document.documentElement.scrollWidth + 'px';
         container.style.filter = 'blur(15px)';
-        console.log(container.style.height);
 
         var scrollHeight = document.documentElement.scrollHeight;
         var translateYStart = scrollHeight; // Start at the bottom of the scroll height
@@ -53,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function() {
     updateKeyframes();
 
     window.addEventListener("resize", function() {
-        console.log("Resize event detected"); // Debugging log
         updateKeyframes();
     });
 });
